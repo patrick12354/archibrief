@@ -64,9 +64,6 @@ export function PrototypeConsole() {
       <form onSubmit={handleSubmit} className="panel rounded-[2rem] border-white/10 p-5 sm:p-6 lg:sticky lg:top-28 lg:self-start">
         <div className="flex items-center justify-between">
           <p className="text-xs uppercase tracking-[0.26em] text-lime">Prototype Console</p>
-          <span className="rounded-full border border-white/10 px-3 py-1 text-[0.68rem] uppercase tracking-[0.2em] text-muted">
-            Server-side Groq
-          </span>
         </div>
 
         <div className="mt-5 grid gap-4">
@@ -323,4 +320,3 @@ function renderMaterial(item: MaterialDirectionItem) {
     lines: [`Palette: ${item.palette}`, `Notes: ${item.notes}`]
   };
 }
-

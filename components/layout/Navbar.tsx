@@ -13,7 +13,7 @@ export function Navbar() {
   const brandHref = pathname === "/" ? "#top" : "/";
   const primaryHref = pathname === "/prototype" ? "/" : "/prototype";
   const primaryLabel = pathname === "/prototype" ? "Back Home" : "Try Prototype";
-  const secondaryHref = pathname === "/prototype" ? "/#how-it-works" : "/#how-it-works";
+  const secondaryHref = "/#how-it-works";
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 18);
@@ -35,8 +35,8 @@ export function Navbar() {
         <div
           className={`mx-auto flex max-w-[90rem] items-center justify-between rounded-full border px-4 py-3 transition duration-300 sm:px-6 ${
             isScrolled
-              ? "border-white/10 bg-black/40 shadow-panel backdrop-blur-xl"
-              : "border-white/5 bg-white/[0.03] backdrop-blur-md"
+              ? "border-white/10 bg-black/75 shadow-[0_18px_44px_rgba(0,0,0,0.28)] backdrop-blur-none sm:bg-black/40 sm:shadow-panel sm:backdrop-blur-xl"
+              : "border-white/5 bg-[#0b0f0c]/92 backdrop-blur-none sm:bg-white/[0.03] sm:backdrop-blur-md"
           }`}
         >
           <a href={brandHref} className="flex items-center gap-3">
@@ -80,16 +80,16 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-black/70 backdrop-blur-2xl lg:hidden"
+            className="fixed inset-0 z-40 bg-black/88 lg:hidden"
           >
             <motion.div
-              initial={{ y: -32, opacity: 0 }}
+              initial={{ y: -24, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -24, opacity: 0 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="mx-4 mt-24 rounded-[2rem] border border-white/10 bg-[#0c110d]/95 p-6 shadow-panel"
+              exit={{ y: -18, opacity: 0 }}
+              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+              className="mx-4 mt-24 rounded-[2rem] border border-white/10 bg-[#0c110d] p-6 shadow-[0_18px_44px_rgba(0,0,0,0.28)]"
             >
-              <div className="blueprint-lines rounded-[1.5rem] border border-white/5 p-5">
+              <div className="rounded-[1.5rem] border border-white/5 p-5">
                 <p className="text-xs uppercase tracking-[0.3em] text-lime">Navigation</p>
                 <div className="mt-8 flex flex-col gap-4">
                   {navLinks.map((link) => (
