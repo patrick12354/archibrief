@@ -1,0 +1,88 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Satoshi", "Avenir Next", "Segoe UI", sans-serif;
+  --font-display: "Ivar Display", "Canela", "Cormorant Garamond", Georgia, serif;
+  --bg: #060807;
+  --panel: rgba(16, 21, 18, 0.72);
+  --line: rgba(227, 236, 229, 0.12);
+  --copy: #f1f2ea;
+  --muted: #a3aca5;
+  --lime: #c7ff4f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(199, 255, 79, 0.13), transparent 22%),
+    radial-gradient(circle at 85% 20%, rgba(124, 255, 193, 0.09), transparent 20%),
+    linear-gradient(180deg, #0a0d0b 0%, #060807 28%, #050605 100%);
+  color: var(--copy);
+}
+
+body {
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-attachment: fixed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(199, 255, 79, 0.85);
+  color: #050605;
+}
+
+.page-grid {
+  position: relative;
+}
+
+.page-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(199, 255, 79, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(199, 255, 79, 0.04) 1px, transparent 1px);
+  background-size: 88px 88px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 88%);
+}
+
+.section-shell {
+  @apply relative mx-auto w-full max-w-[90rem] px-5 sm:px-8 lg:px-10;
+}
+
+.panel {
+  @apply rounded-[1.75rem] border border-white/10 bg-white/5 shadow-panel backdrop-blur-md;
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.68rem] uppercase tracking-[0.28em] text-lime;
+}
+
+.hero-glow {
+  background:
+    radial-gradient(circle at center, rgba(199, 255, 79, 0.2), transparent 52%),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.07), transparent 68%);
+}
+
+.blueprint-lines {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
