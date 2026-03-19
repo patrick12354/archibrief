@@ -42,7 +42,8 @@ export function HeroSection() {
               className="mt-7 max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8"
             >
               Paste chat messages, project notes, or rough requirements and get a clean architectural
-              brief, room program, zoning logic, and next-step questions in minutes.
+              brief, room program, zoning logic, climate response, adjacency planning, and next-step
+              design moves in minutes.
             </motion.p>
 
             <motion.div
@@ -51,8 +52,8 @@ export function HeroSection() {
               transition={{ duration: 0.85, delay: 0.32 }}
               className="mt-10 flex flex-col gap-4 sm:flex-row"
             >
-              <Button href="#final-cta">Try Prototype</Button>
-              <Button href="#how-it-works" variant="secondary">
+              <Button href="/prototype">Try Prototype</Button>
+              <Button href="/#how-it-works" variant="secondary">
                 See How It Works
               </Button>
             </motion.div>
@@ -64,9 +65,9 @@ export function HeroSection() {
               className="mt-10 grid max-w-xl gap-4 sm:grid-cols-3"
             >
               {[
-                ["8 min", "average brief cleanup"],
-                ["5 outputs", "summary to questions"],
-                ["0 guesswork", "before concept starts"]
+                ["12+", "planning layers generated"],
+                ["PDF", "handoff-ready export"],
+                ["Faster", "concept setup for architects"]
               ].map(([value, label]) => (
                 <div key={label} className="panel rounded-2xl border-white/8 px-4 py-4">
                   <p className="text-xl font-semibold tracking-[-0.04em] text-copy">{value}</p>
@@ -108,7 +109,7 @@ export function HeroSection() {
               transition={{ ...floatTransition, duration: 6.3 }}
               className="absolute right-6 top-20 w-[48%] panel rounded-[1.6rem] p-5"
             >
-              <p className="text-xs uppercase tracking-[0.28em] text-lime">Generated Space Program</p>
+              <p className="text-xs uppercase tracking-[0.28em] text-lime">Architectural Program</p>
               <div className="mt-4 space-y-3">
                 {[
                   ["Living / Dining", "42 sqm"],
@@ -129,12 +130,12 @@ export function HeroSection() {
               transition={{ ...floatTransition, duration: 6.9 }}
               className="absolute bottom-24 left-10 w-[44%] rounded-[1.6rem] border border-lime/20 bg-lime/[0.08] p-5 shadow-glow backdrop-blur-xl"
             >
-              <p className="text-xs uppercase tracking-[0.28em] text-lime">Zoning Suggestions</p>
+              <p className="text-xs uppercase tracking-[0.28em] text-lime">Zoning + Climate</p>
               <div className="mt-4 grid gap-3">
                 {[
                   "Public zone faces garden",
                   "Service spine buffers heat",
-                  "Work zone separated from family core"
+                  "Deep overhangs on west-facing glazing"
                 ].map((item) => (
                   <div key={item} className="rounded-2xl border border-lime/15 bg-black/20 px-3 py-3 text-sm text-copy">
                     {item}
@@ -148,12 +149,12 @@ export function HeroSection() {
               transition={{ ...floatTransition, duration: 7.2 }}
               className="absolute bottom-8 right-8 w-[52%] panel rounded-[1.6rem] p-5"
             >
-              <p className="text-xs uppercase tracking-[0.28em] text-lime">Follow-up Questions</p>
+              <p className="text-xs uppercase tracking-[0.28em] text-lime">Next Design Moves</p>
               <div className="mt-4 space-y-3">
                 {[
-                  "How often will the studio host clients?",
-                  "Is future expansion planned on site?",
-                  "Which spaces need acoustic separation?"
+                  "Test compact wet-core arrangement",
+                  "Study privacy gradient from entry to bedrooms",
+                  "Validate workroom acoustic separation"
                 ].map((question) => (
                   <div key={question} className="rounded-2xl border border-white/8 bg-white/[0.03] px-3 py-3 text-sm text-copy">
                     {question}
@@ -167,4 +168,3 @@ export function HeroSection() {
     </section>
   );
 }
-

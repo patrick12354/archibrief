@@ -1,8 +1,9 @@
 ﻿export const navLinks = [
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Preview", href: "#preview" },
-  { label: "Features", href: "#features" },
-  { label: "FAQ", href: "#faq" }
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Preview", href: "/#preview" },
+  { label: "Features", href: "/#features" },
+  { label: "Prototype", href: "/prototype" },
+  { label: "FAQ", href: "/#faq" }
 ];
 
 export const trustBadges = [
@@ -109,7 +110,7 @@ export const faqs = [
   {
     question: "Can I export the result?",
     answer:
-      "Yes. Outputs are designed to be easy to copy into proposals, briefing documents, or internal workflow tools."
+      "Yes. Outputs are designed to be easy to move into PDF handoff, briefing documents, or internal workflow tools."
   },
   {
     question: "Does it replace an architect?",
@@ -117,4 +118,3 @@ export const faqs = [
       "No. It accelerates thinking and documentation. Design judgment, interpretation, and authorship stay with the architect."
   }
 ];
-

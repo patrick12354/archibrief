@@ -16,23 +16,23 @@ export function Footer() {
               AI-powered architectural briefing for professionals who need cleaner inputs before concept work begins.
             </p>
             <div className="mt-6">
-              <Button href="#final-cta">Try Prototype</Button>
+              <Button href="/prototype">Try Prototype</Button>
             </div>
           </div>
 
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-lime">Sections</p>
             <div className="mt-5 grid gap-3 text-sm text-muted">
-              <a href="#how-it-works" className="transition hover:text-copy">
+              <a href="/#how-it-works" className="transition hover:text-copy">
                 How It Works
               </a>
-              <a href="#preview" className="transition hover:text-copy">
+              <a href="/#preview" className="transition hover:text-copy">
                 Product Preview
               </a>
-              <a href="#features" className="transition hover:text-copy">
-                Features
+              <a href="/prototype" className="transition hover:text-copy">
+                Prototype Workspace
               </a>
-              <a href="#faq" className="transition hover:text-copy">
+              <a href="/#faq" className="transition hover:text-copy">
                 FAQ
               </a>
             </div>
@@ -41,13 +41,13 @@ export function Footer() {
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-lime">Connect</p>
             <div className="mt-5 grid gap-3 text-sm text-muted">
-              <a href="#top" className="transition hover:text-copy">
+              <a href="/" className="transition hover:text-copy">
                 X / Twitter
               </a>
-              <a href="#top" className="transition hover:text-copy">
+              <a href="/" className="transition hover:text-copy">
                 LinkedIn
               </a>
-              <a href="#top" className="transition hover:text-copy">
+              <a href="/" className="transition hover:text-copy">
                 Email
               </a>
             </div>
@@ -61,4 +61,3 @@ export function Footer() {
     </footer>
   );
 }
-

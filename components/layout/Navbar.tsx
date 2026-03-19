@@ -1,13 +1,19 @@
 ﻿"use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { navLinks } from "@/lib/data";
 
 export function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const brandHref = pathname === "/" ? "#top" : "/";
+  const primaryHref = pathname === "/prototype" ? "/" : "/prototype";
+  const primaryLabel = pathname === "/prototype" ? "Back Home" : "Try Prototype";
+  const secondaryHref = pathname === "/prototype" ? "/#how-it-works" : "/#how-it-works";
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 18);
@@ -33,7 +39,7 @@ export function Navbar() {
               : "border-white/5 bg-white/[0.03] backdrop-blur-md"
           }`}
         >
-          <a href="#top" className="flex items-center gap-3">
+          <a href={brandHref} className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-lime/30 bg-lime/10 text-sm font-semibold text-lime">
               AB
             </div>
@@ -49,7 +55,7 @@ export function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Button href="#final-cta">Try Prototype</Button>
+            <Button href={primaryHref}>{primaryLabel}</Button>
           </div>
 
           <button
@@ -98,10 +104,10 @@ export function Navbar() {
                   ))}
                 </div>
                 <div className="mt-8 grid gap-3">
-                  <Button href="#final-cta" className="w-full">
-                    Try Prototype
+                  <Button href={primaryHref} className="w-full">
+                    {primaryLabel}
                   </Button>
-                  <Button href="#how-it-works" className="w-full" variant="secondary">
+                  <Button href={secondaryHref} className="w-full" variant="secondary">
                     See How It Works
                   </Button>
                 </div>
@@ -113,4 +119,3 @@ export function Navbar() {
     </>
   );
 }
-
