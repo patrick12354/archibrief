@@ -323,3 +323,4 @@ function renderMaterial(item: MaterialDirectionItem) {
     lines: [`Palette: ${item.palette}`, `Notes: ${item.notes}`]
   };
 }
+
